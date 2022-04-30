@@ -10,12 +10,17 @@ public class BoatModes : MonoBehaviour
 
     public UnityEvent cruiseEvents, deckEvents;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) SwitchModes();
+        SwitchModes();
     }
 
-    private void SwitchModes()
+    private void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.Space)) SwitchModes();
+    }
+
+    public void SwitchModes()
     {
         if(myBoatMode == BoatMode.cruise)
         {

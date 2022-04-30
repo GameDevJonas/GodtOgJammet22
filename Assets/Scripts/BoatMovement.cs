@@ -45,11 +45,13 @@ public class BoatMovement : MonoBehaviour
         if (cruiseModeTrue)
         {
             canMove = true;
+            _rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
         else
         {
             BoatSpeedValue = 0;
             _rb.velocity = Vector3.zero;
+            _rb.constraints = RigidbodyConstraints.FreezeAll;
             canMove = false;
         }
     }
