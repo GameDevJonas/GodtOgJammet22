@@ -10,6 +10,7 @@ public class BoatMovement : MonoBehaviour
 
     [SerializeField] private float turnSpeed;
     [SerializeField] private float boatSpeed;
+    [SerializeField] private Transform boatPivot;
 
     [SerializeField] private TextMeshProUGUI boatSpeedText;
 
@@ -40,6 +41,8 @@ public class BoatMovement : MonoBehaviour
     {
         _xInput = Input.GetAxisRaw("Horizontal");
         _yInput = Input.GetAxisRaw("Vertical");
+
+        //boatPivot.position = transform.position;
     }
 
     private void CalculateSpeed()
