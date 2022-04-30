@@ -4,56 +4,218 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private CharacterController _characterController;
-    private Transform mainCamera;
+
+    //PLEASE COMMENT THIS CODE LMAO
 
 
-    public float speed = 6.0f;
-    public float jumpSpeed = 8.0f;
-    public float gravity = 20.0f;
+    [Header("Buttons")]
+    public KeyCode runButton;
+    public KeyCode jumpButton;
+    public KeyCode crouchButton;
 
-    private float xInput, yInput;
+    [Header("Player inputs")]
+    public float movementSpeed;
+    public float runSpeed;
+    public float jumpHeight;
+    float currentJumpHeight;
+    public float crouchSpeed;
+    public bool canDoubleJump;
+    public float longJumpHeight;
+    public float longJumpTime;
+    public bool canLongJump;
 
-    private Vector3 moveDirection;
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public bool isGrounded;
 
-    private void Awake()
+    [Header("Top Check")]
+    public Transform topCheck;
+    public LayerMask topLayer;
+    public bool isTop;
+    public bool headColliding;
+    public bool crouchButtonIsHeld;
+    public bool isCrouched;
+
+    CharacterController controller;
+    Vector3 movementDir;
+
+    float longJumpTimer;
+    float jumpYPos;
+
+    [Header("Math")]
+    Vector3 velocity;
+    public float gravityConst = -9.81f;
+    public float gravityMultiplayer;
+
+
+    void Start()
     {
-        _characterController = GetComponent<CharacterController>();
-        mainCamera = Camera.main.transform;
+        controller = GetComponent<CharacterController>();
+        currentJumpHeight = jumpHeight;
     }
+
 
     void Update()
     {
-        GetInputs();
-        ApplyMovement();
+        isGrounded = Physics.CheckSphere(groundCheck.position, 0.4f, groundLayer);
+        isTop = Physics.CheckSphere(topCheck.position, 0.4f, topLayer);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2;
+            if (!canDoubleJump) canDoubleJump = true;
+            // if (longJumpTimer > 0) longJumpTimer = 0;
+        }
+        else 
+        {
+            velocity.y += gravityConst * gravityMultiplayer * Time.deltaTime;
+        }
+
+        controller.Move(velocity*Time.deltaTime);
+
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        movementDir = transform.right * x + transform.forward * z;
+
+        if (Input.GetKey(crouchButton)||isCrouched)
+        {
+            CrouchMove();
+        }
+        else if (Input.GetKey(runButton) && !isCrouched)
+        {
+            Run();
+        }
+        else 
+        {
+            Move();
+        }
+
+
+        if(Input.GetKeyDown(jumpButton) && isGrounded && !isTop)
+        {
+            Jump();
+        }
+
+        if(Input.GetKeyDown(jumpButton) && !isGrounded && canDoubleJump && !isTop)
+        {
+            Jump();
+            canDoubleJump = false;
+        }
+
+        if (Input.GetKey(jumpButton) && canLongJump)
+        {
+            longJumpTimer += Time.deltaTime;
+            if (longJumpTimer >= longJumpTime)
+            {
+                LongJump();
+            }
+        }
+
+
+        if (Input.GetKeyDown(crouchButton) && !isCrouched)
+        {
+            crouchButtonIsHeld = true;
+            Crouch();
+        }
+
+        if(headColliding && Input.GetKeyDown(crouchButton))
+        {
+            crouchButtonIsHeld = true;
+        }
+
+        if (Input.GetKeyUp(crouchButton))
+        {
+            crouchButtonIsHeld = false;
+        }
+
+        if (Input.GetKeyUp(crouchButton) && !headColliding)
+        {
+            UnCrouch();
+        }
+
+        if (isTop)
+        {
+            headColliding = true;
+        }
+        else
+        {
+            headColliding = false;
+        }
+
+        if (!crouchButtonIsHeld && !headColliding)
+        {
+            DefaultHeightAndCamera();
+        }
+
     }
 
-    private void GetInputs()
+    void DefaultHeightAndCamera()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        controller.height = 3f;
+    }
 
-        if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
+    void Jump()
+    {
+        jumpYPos = transform.position.y;
+        longJumpTimer = 0;
+        canLongJump = true;
+        velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityConst *gravityMultiplayer);
+    }
+
+    void LongJump()
+    {
+        canLongJump = false;
+        float heightDiff = transform.position.y - jumpYPos;
+        velocity.y = Mathf.Sqrt((longJumpHeight - heightDiff) * -2 * gravityConst * gravityMultiplayer);
+    }
+
+    void CrouchMove()
+    {
+        Vector3 motion = movementDir * crouchSpeed * Time.deltaTime;
+        controller.Move(motion);
+    }
+
+    void Crouch()
+    {
+        isCrouched = true;
+        controller.height *= 0.5f;
+        Camera.main.transform.localPosition -= new Vector3(0, 0.5f * Camera.main.transform.localPosition.y, 0);
+        groundCheck.localPosition *= 0.5f;
+    }
+
+    void UnCrouch()
+    {
+        isCrouched = false;
+        controller.height *= 2;
+        Camera.main.transform.localPosition += new Vector3(0, Camera.main.transform.localPosition.y, 0);
+        groundCheck.localPosition *= 2;
+    }
+
+    void Run()
+    {
+        Vector3 motion = movementDir * runSpeed * Time.deltaTime;
+        controller.Move(motion);
+    }
+
+    void Move()
+    {
+        Vector3 motion = movementDir * movementSpeed * Time.deltaTime;
+        controller.Move(motion);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "JumpPad" && isGrounded)
         {
-            DoJump();
+            jumpHeight = 10f;
+            Jump();
+        }
+        else if (hit.gameObject.layer == 3)
+        {
+            jumpHeight = currentJumpHeight;
         }
     }
 
-    private void ApplyMovement()
-    {
-        moveDirection = new Vector3(xInput, -gravity * Time.deltaTime, yInput);
-        moveDirection *= speed;
-
-        _characterController.Move(moveDirection * Time.deltaTime);
-    }
-
-    private void RotatePlayerToCamera()
-    {
-
-    }
-
-    private void DoJump()
-    {
-        moveDirection.y = jumpSpeed;
-    }
 }

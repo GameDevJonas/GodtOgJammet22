@@ -40,6 +40,20 @@ public class BoatMovement : MonoBehaviour
         MoveBoat();
     }
 
+    public void SwitchMode(bool cruiseModeTrue)
+    {
+        if (cruiseModeTrue)
+        {
+            canMove = true;
+        }
+        else
+        {
+            BoatSpeedValue = 0;
+            _rb.velocity = Vector3.zero;
+            canMove = false;
+        }
+    }
+
     private void GetInputs()
     {
         _xInput = Input.GetAxisRaw("Horizontal");
