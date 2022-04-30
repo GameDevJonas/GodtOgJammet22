@@ -12,6 +12,7 @@ public class QuestDefinition
 {
     public string questNameId;
     public GameObject furnitureItem;
+    public Transform furnitureSpawnLocation;
 
     public List<QuestStartRequirement> questStartRequirements = new List<QuestStartRequirement>();
     public List<QuestResourceRequirement> questCompletionRequirements = new List<QuestResourceRequirement>();

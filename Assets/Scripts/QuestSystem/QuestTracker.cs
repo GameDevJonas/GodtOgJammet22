@@ -7,6 +7,7 @@ public static class QuestTracker
     public static Quest CurrentQuest { get; set; }
 
     private static List<Quest> completedQuests = new List<Quest>();
+    public static IReadOnlyList<Quest> CompletedQuests => completedQuests;
 
     public static void RegisterQuestAsComplete(Quest quest)
     {

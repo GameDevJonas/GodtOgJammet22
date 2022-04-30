@@ -24,6 +24,7 @@ public class QuestManager : MonoBehaviour
     [Button]
     public void StartQuest(string questName)
     {
+
         // Sanity check
         if (QuestTracker.CurrentQuest != null)
         {
@@ -39,6 +40,13 @@ public class QuestManager : MonoBehaviour
             return;
         }
         
+        if(QuestTracker.CompletedQuests.Any(q => q.questDefinition.questNameId.Equals(questName)))
+        {
+            Debug.LogError($"Quest \"{questName}\" already completed.");
+            return;
+        }
+
+
         // Set new quest as current quest
         QuestTracker.CurrentQuest = new Quest(questToStart.questDefinition);
         
