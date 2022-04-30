@@ -52,8 +52,8 @@ Material:
     - SURFACE_FOAM: 1
     - WORLD_SPACE_UV: 1
     - _IntersectionFoamBlend: 1
-    - _IntersectionFoamDepth: 3
-    - _IntersectionFoamScale: 2
+    - _IntersectionFoamDepth: 0.72
+    - _IntersectionFoamScale: 0.19
     - _IntersectionWaterBlend: 0
     - _QueueControl: 0
     - _QueueOffset: 0
