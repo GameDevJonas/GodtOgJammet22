@@ -37,8 +37,10 @@ public class PlayerMovement : MonoBehaviour
     public bool crouchButtonIsHeld;
     public bool isCrouched;
 
-    CharacterController controller;
-    Vector3 movementDir;
+    public CharacterController controller;
+    public Vector3 movementDir;
+
+    public bool isMoving;
 
     float longJumpTimer;
     float jumpYPos;
@@ -48,11 +50,14 @@ public class PlayerMovement : MonoBehaviour
     public float gravityConst = -9.81f;
     public float gravityMultiplayer;
 
+    private Transform mainCam;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         currentJumpHeight = jumpHeight;
+        isMoving = false;
+        mainCam = Camera.main.transform;
     }
 
 
@@ -77,7 +82,12 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        movementDir = transform.right * x + transform.forward * z;
+        //movementDir = transform.right * x + transform.forward * z;
+        Vector3 forward = mainCam.forward;
+        Vector3 right = mainCam.right;
+        forward.Normalize();
+        right.Normalize();
+        movementDir = forward * z + right * x;
 
         if (Input.GetKey(crouchButton)||isCrouched)
         {
@@ -202,6 +212,7 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         Vector3 motion = movementDir * movementSpeed * Time.deltaTime;
+        isMoving = (motion != Vector3.zero);
         controller.Move(motion);
     }
 

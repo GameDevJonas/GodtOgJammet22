@@ -5,7 +5,7 @@ using UnityEngine;
 public class IslandInfo : MonoBehaviour
 {
     [SerializeField] private string islandName;
-
+    [SerializeField] private GameObject myMapName;
     private CruisingUI cruisingUI;
 
     private bool activated;
@@ -16,9 +16,15 @@ public class IslandInfo : MonoBehaviour
         cruisingUI = FindObjectOfType<CruisingUI>();
     }
 
+    private void Start()
+    {
+        myMapName.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) EnterExitMe();
+        if (!myMapName.activeSelf) myMapName.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)

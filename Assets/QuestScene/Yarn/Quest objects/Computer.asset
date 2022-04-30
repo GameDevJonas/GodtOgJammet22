@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Computer
-    furnitureItem: {fileID: 1228325886208064136, guid: 6a55f398bd165b4478bb27a38269a819, type: 3}
-    furnitureSpawnLocation: {fileID: 1228325886208064140, guid: 6a55f398bd165b4478bb27a38269a819, type: 3}
+    furnitureItem: {fileID: 0}
     questCompletionRequirements:
     - resourceId: steel
       requiredAmount: 1

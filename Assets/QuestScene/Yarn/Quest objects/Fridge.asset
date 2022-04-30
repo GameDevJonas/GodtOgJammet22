@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Fridge
-    furnitureItem: {fileID: 1228325886208064136, guid: 0bc55ef9e41d681438de05ff94225540, type: 3}
-    furnitureSpawnLocation: {fileID: 1228325886208064140, guid: 0bc55ef9e41d681438de05ff94225540, type: 3}
+    furnitureItem: {fileID: 0}
     questCompletionRequirements:
     - resourceId: glass
       requiredAmount: 1
