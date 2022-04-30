@@ -10,8 +10,93 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
   sourceScripts:
   - {fileID: 6391573757903218779, guid: 95ef25693edada0419982de33d21135e, type: 3}
+  - {fileID: 6391573757903218779, guid: a5ce07428afc0a94da08fecc380d69b6, type: 3}
+  - {fileID: 6391573757903218779, guid: eded2226327aecb4d8f4560f7bc940e1, type: 3}
+  - {fileID: 6391573757903218779, guid: 42f2c5ddf5032134a8da7c86e3f84a9c, type: 3}
+  - {fileID: 6391573757903218779, guid: 584b2adc82adc4440a45eb0e01b5bb9d, type: 3}
+  - {fileID: 6391573757903218779, guid: cc8ef0bbf75b95942b70ed243718e662, type: 3}
   compileErrors: []
-  serializedDeclarations: []
+  serializedDeclarations:
+  - name: $guitar_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Toffe_Quests.yarn, node GuitarQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 95ef25693edada0419982de33d21135e, type: 3}
+  - name: $fridge_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Toffe_Quests.yarn, node FridgeQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 95ef25693edada0419982de33d21135e, type: 3}
+  - name: $monkey_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Siv_Quests.yarn, node MonkeyQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: a5ce07428afc0a94da08fecc380d69b6, type: 3}
+  - name: $pizza_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Siv_Quests.yarn, node PizzaQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: a5ce07428afc0a94da08fecc380d69b6, type: 3}
+  - name: $palm_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Tonje_Quests.yarn, node PalmQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: eded2226327aecb4d8f4560f7bc940e1, type: 3}
+  - name: $sofa_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Tonje_Quests.yarn, node SofaQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: eded2226327aecb4d8f4560f7bc940e1, type: 3}
+  - name: $panda_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Panda_Quests.yarn, node PandaQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 42f2c5ddf5032134a8da7c86e3f84a9c, type: 3}
+  - name: $computer_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Panda_Quests.yarn, node ComputerQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 42f2c5ddf5032134a8da7c86e3f84a9c, type: 3}
+  - name: $icecream_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Icebell_Quests.yarn, node IcecreamQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 584b2adc82adc4440a45eb0e01b5bb9d, type: 3}
+  - name: $jukebox_quest
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Icebell_Quests.yarn, node JukeboxQuest
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 584b2adc82adc4440a45eb0e01b5bb9d, type: 3}
   defaultLanguage: nb-NO
   languagesToSourceAssets: []
   useAddressableAssets: 0
