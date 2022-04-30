@@ -1,0 +1,47 @@
+﻿title: PalmQuest
+---
+<<if $palm_quest>>
+<<jump SofaQuest>>
+<<else>>
+
+Tonje: I'd really love some coconut water!
+Tonje: But there's no palm trees around.
+Tonje: Do you think we could find one on one of these islands?
+-> Leave it to me!
+    Tonje: Oh wow nice!
+    <<startQuest Palm>>
+    <<set $palm_quest to true>>
+-> I'll need to think about it.
+    Tonje: No worries!
+
+<<endif>>
+
+
+===
+
+
+title: SofaQuest
+---
+<<if $sofa_quest>>
+<<jump TonjeHappy>>
+<<else>>
+
+Tonje: I close my eyes and I dream about...
+Tonje: a BIG... cozy... sofa.
+Tonje: Can you imagine?
+-> Let's do it!
+    Tonje: Yeah!
+    <<startQuest Sofa>>
+    <<set $sofa_quest to true>>
+-> Not really.
+    Tonje: Aw, okay.
+
+<<endif>>
+
+===
+
+
+title: TonjeHappy
+---
+Tonje: Great job making this place look good!
+===

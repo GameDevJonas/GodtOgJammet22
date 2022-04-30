@@ -1,11 +1,28 @@
 ﻿title: BenchQuest
 ---
+<<if $guitar_quest>>
+<<jump MonsterQuest>>
+<<else>>
 Hey, I think this place could use a bench.
 How about it?
 -> Yeah!
     Great!
+    <<startQuest Guitar>>
+    <<set $guitar_quest to true>>
 -> No.
     Alright, I guess not.
+<<endif>>
+===
+title: MonsterQuest
+---
+Hey I need a fridge.
+A cool fridge.
+Where I can store my Monster.
+Mmmm.
+-> Coming right up!
+    Awww yea.
+-> Nah bro.
+    Nooooo
 ===
 title: LampQuest
 ---

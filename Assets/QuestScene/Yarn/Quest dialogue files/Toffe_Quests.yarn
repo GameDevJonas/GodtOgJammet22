@@ -1,0 +1,40 @@
+﻿title: GuitarQuest
+---
+<<if $guitar_quest>>
+<<jump FridgeQuest>>
+<<else>>
+Toffe: I think we should have a guitar here.
+Toffe: A real nice one, so we can all gather around the campfire at night.
+Toffe: Now, I know what you're thinking. Campfire on the ocean.
+Toffe: But don't worry about it. Worry about these smooth tunes instead.
+Toffe: So how about it?
+-> Yeah!
+    Toffe: Great!
+    <<startQuest Guitar>>
+    <<set $guitar_quest to true>>
+-> Not right now. 
+    Toffe: Alright, I guess not.
+<<endif>>
+===
+
+title: FridgeQuest
+---
+<<if $fridge_quest>>
+<<jump ToffeHappy>>
+<<else>>
+Toffe: Alright, I need a fridge.
+Toffe: A real cool fridge. You know?
+Toffe: Where I can store my Monster Energy Drinks. Mmmm.
+-> Coming right up!
+    Toffe: You're the best!
+    <<startQuest Fridge>>
+    <<set $fridge_quest to true>>
+-> I have something else to do right now. 
+    Toffe: Maaaan. Okay, I'll wait.
+<<endif>>
+===
+
+title: ToffeHappy
+---
+Toffe: Thanks for helping me out!
+===

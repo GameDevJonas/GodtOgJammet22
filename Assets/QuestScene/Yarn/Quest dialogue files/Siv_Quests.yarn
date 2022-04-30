@@ -1,0 +1,48 @@
+﻿title: MonkeyQuest
+---
+<<if $monkey_quest>>
+<<jump PizzaQuest>>
+<<else>>
+
+Siv: This boat needs some culture.
+Siv: Some art.
+Siv: How about a statue?
+-> Great idea!
+    Siv: I know!
+    <<startQuest Monkey>>
+    <<set $monkey_quest to true>>
+-> Maybe later?
+    Siv: That's okay.
+
+<<endif>>
+
+===
+
+
+title: PizzaQuest
+---
+<<if $pizza_quest>>
+<<jump SivHappy>>
+<<else>>
+
+Siv: Ughhhh I'm really hungry.
+Siv: I could go for some pizza right now.
+Siv: Some GOOD pizza.
+Siv: How about it?
+-> Sounds good to me!
+    Siv: Can't wait!
+    <<startQuest Pizza>>
+    <<set $pizza_quest to true>>
+-> I'll come back to you.
+    Siv: OK!
+
+
+<<endif>>
+
+===
+
+
+title: SivHappy
+---
+Siv: I'm having a great time!
+===

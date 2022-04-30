@@ -27,6 +27,11 @@ public class YarnInteractable : MonoBehaviour
 
     public void StartConversation()
     {
+        if (QuestTracker.CurrentQuest != null)
+        {
+            return;
+        }
+        
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
         ConversationActive = true;

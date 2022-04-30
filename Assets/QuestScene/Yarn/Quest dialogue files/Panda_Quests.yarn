@@ -1,0 +1,44 @@
+﻿title: PandaQuest
+---
+<<if $panda_quest>>
+<<jump ComputerQuest>>
+<<else>>
+
+Panda: Alright hear me out.
+Panda: I have a few ideas for where to put a giant panda plushie.
+Panda: If only we had one...
+-> I'm on it!
+    Panda: Yes! Awesome!
+    <<startQuest Panda>>
+    <<set $panda_quest to true>>
+-> Not right now.
+    Panda: I see. Maybe later!
+
+<<endif>>
+===
+
+
+title: ComputerQuest
+---
+<<if $computer_quest>>
+<<jump PandaHappy>>
+<<else>>
+
+Panda: I love the ocean, but I miss my computer.
+Panda: All my friends are in it.
+Panda: I mean, I know you're all here, but...
+-> I'll get one for you.
+    Panda: Oh, sweet! 
+    <<startQuest Computer>>
+    <<set $computer_quest to true>>
+-> I can't right now.
+    Panda: Alright, I'll wait.
+
+
+<<endif>>
+===
+
+title: PandaHappy
+---
+Panda: Thank you, this place is awesome!
+===
