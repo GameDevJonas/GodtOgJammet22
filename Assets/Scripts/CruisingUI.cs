@@ -9,6 +9,8 @@ public class CruisingUI : MonoBehaviour
     [SerializeField] private Image speedometerArrow;
     [SerializeField] private TextMeshProUGUI boatSpeedText;
 
+    [SerializeField] private Animator islandNameAnim;
+
     private BoatMovement boatMovement;
 
     private void Awake()
@@ -25,5 +27,11 @@ public class CruisingUI : MonoBehaviour
     {
         boatSpeedText.text = boatMovement.SpeedDouble.ToString();
         speedometerArrow.transform.rotation = Quaternion.Euler(0, 0, boatMovement.RotationAngle);
+    }
+
+    public void IslandNameIn(string islandName)
+    {
+        islandNameAnim.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = islandName;
+        islandNameAnim.SetTrigger("NameIn");
     }
 }

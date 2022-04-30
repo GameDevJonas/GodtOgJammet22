@@ -153,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DefaultHeightAndCamera()
     {
-        controller.height = 3f;
+        //controller.height = 3f;
     }
 
     void Jump()
