@@ -5,9 +5,9 @@ using Cinemachine;
 
 public class BoatMovement : MonoBehaviour
 {
-    public float BoatSpeedValue;
-    public float RotationAngle;
-    public double SpeedDouble; 
+    [HideInInspector] public float BoatSpeedValue;
+    [HideInInspector] public float RotationAngle;
+    [HideInInspector] public double SpeedDouble;
 
     public bool canMove;
 
@@ -38,6 +38,20 @@ public class BoatMovement : MonoBehaviour
     {
         RotateBoat();
         MoveBoat();
+    }
+
+    public void SwitchMode(bool cruiseModeTrue)
+    {
+        if (cruiseModeTrue)
+        {
+            canMove = true;
+        }
+        else
+        {
+            BoatSpeedValue = 0;
+            _rb.velocity = Vector3.zero;
+            canMove = false;
+        }
     }
 
     private void GetInputs()
