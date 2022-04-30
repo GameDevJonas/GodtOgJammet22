@@ -5,9 +5,9 @@ using Cinemachine;
 
 public class BoatMovement : MonoBehaviour
 {
-    public float BoatSpeedValue;
-    public float RotationAngle;
-    public double SpeedDouble; 
+    [HideInInspector] public float BoatSpeedValue;
+    [HideInInspector] public float RotationAngle;
+    [HideInInspector] public double SpeedDouble;
 
     public bool canMove;
 
