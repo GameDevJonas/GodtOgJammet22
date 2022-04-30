@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this script is irrelevant.
+
 public class StartConversation : MonoBehaviour
 {
 

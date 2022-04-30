@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
 
+//this script is added to the object who speaks.
 
 public class YarnInteractable : MonoBehaviour
 {
+    //if a conversation is currently active & running.
     public static bool ConversationActive;
-
 
     private DialogueRunner dialogueRunner;
     private LineView lineView;
@@ -20,6 +21,7 @@ public class YarnInteractable : MonoBehaviour
     {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
+
         lineView = FindObjectOfType<Yarn.Unity.LineView>();
     }
 
@@ -32,7 +34,12 @@ public class YarnInteractable : MonoBehaviour
 
     private void EndConversation()
     {
+        if (isCurrentConversation)
+        {
+            isCurrentConversation = false;
+        }
 
+        if (ConversationActive) ConversationActive = false;
     }
 
     private void Update()

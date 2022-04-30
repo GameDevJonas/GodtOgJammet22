@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+//this script is added to the object who speaks.
+
 public class Interactable : MonoBehaviour
 {
 
     [SerializeField] private BoxCollider interactableBox;
     public UnityEvent OnInteracted = new UnityEvent();
     
-    private bool isInteractable;
+    public static bool isInteractable;
 
 
     private void Update()
