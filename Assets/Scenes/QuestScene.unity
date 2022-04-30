@@ -839,6 +839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests:
   - {fileID: 11400000, guid: e57aff867af17eb4eb2f45130147ba3e, type: 2}
+  - {fileID: 11400000, guid: d66af36521fe9884283b29f58ab023bd, type: 2}
 --- !u!4 &1376556658
 Transform:
   m_ObjectHideFlags: 0
@@ -1109,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bf5973c0274464da37ade5e509ef7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationStartNode: BenchQuest
+  conversationStartNode: GuitarQuest
 --- !u!114 &1691145045
 MonoBehaviour:
   m_ObjectHideFlags: 0

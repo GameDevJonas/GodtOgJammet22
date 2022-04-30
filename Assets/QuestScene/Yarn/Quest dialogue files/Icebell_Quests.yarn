@@ -1,0 +1,45 @@
+﻿title: IcecreamQuest
+---
+<<if icecream_quest>>
+<<jump JukeboxQuest>>
+<<else>>
+
+Icebell: WowowowowOWOWOW I want some ice cream!!!!!
+Icebell: YEEEEEESSS
+Icebell: Let's make some!!!!!!!!!
+Icebell: We need an ice cream machine!!! That'd be so... COOL!!!!
+-> OK!
+    Icebell: Yes... Very good... Very nICE.
+    <<startQuest Icecream>>
+    <<set icecream_quest to true>>
+-> Not right now...
+    Icebell: NOOOOOOOOO
+<<endif>>
+===
+
+
+title: JukeboxQuest
+---
+<<if jukebox_quest>>
+<<jump IcebellHappy>>
+<<else>>
+
+Icebell: Okay okay okay. Can we get some TUNES in here? 
+Icebell: Some real CHILL tunes...
+Icebell: I think we need a jukebox!
+-> Great idea!
+    Icebell: SWEET!!!
+    <<startQuest Jukebox>>
+    <<set jukebox_quest to true>>
+-> I'm busy.
+    Icebell: Oh, that's too bad!!!!!!!!!!! Maybe later.
+<<endif>>
+
+===
+
+
+
+title: IcebellHappy
+---
+Icebell: This place is looking pretty COOL!!!!
+==
