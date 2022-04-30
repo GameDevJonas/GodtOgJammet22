@@ -9,6 +9,12 @@ public class CruisingUI : MonoBehaviour
     [SerializeField] private Image speedometerArrow;
     [SerializeField] private TextMeshProUGUI boatSpeedText;
 
+    [SerializeField] private GameObject minimapObject;
+    [SerializeField] private GameObject speedometerObject;
+
+    [SerializeField] private Transform boatPlayer;
+    [SerializeField] private Transform boatUI;
+
     [SerializeField] private Animator islandNameAnim;
 
     private BoatMovement boatMovement;
@@ -21,6 +27,18 @@ public class CruisingUI : MonoBehaviour
     private void Update()
     {
         UpdateSpeedometer();
+        CheckForUI();
+    }
+
+    private void CheckForUI()
+    {
+        boatUI.position = new Vector3(boatPlayer.position.x, boatUI.position.y, boatPlayer.position.z);
+        boatUI.rotation = boatPlayer.GetChild(0).rotation;
+
+        bool tabKeyDown = Input.GetKey(KeyCode.Tab);
+        minimapObject.SetActive(tabKeyDown);
+        speedometerObject.SetActive(tabKeyDown);
+
     }
 
     private void UpdateSpeedometer()
