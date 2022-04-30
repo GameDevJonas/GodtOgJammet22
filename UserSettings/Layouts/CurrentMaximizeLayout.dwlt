@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18422
+  controlID: 19060
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18423
+  controlID: 19061
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0cdf0000
-      m_LastClickedID: 57100
-      m_ExpandedIDs: 20affeff3eb9feff64bffeff38effeff6015ffff0828ffff4433ffff563dffffc242ffff984effff2253ffff64dfffff1efbfffff4ffffff604a0000864a0000ccca0000d0ca00009cdf0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: dc58feff1665feffee71feff20affeff3eb9feff64bffeff38effeff6015ffff0828ffff4433ffff563dffffc242ffff984effff2253ffff64dfffff1efbfffff4ffffff604a0000864a0000ccca0000d0ca00009cdf00002ce9000004ea000014ea0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.85717, y: 0.9220376, z: 4.504013}
+    m_Target: {x: 1.8488761, y: 1.5274158, z: 3.4495456}
     speed: 2
-    m_Value: {x: -13.85717, y: 0.9220376, z: 4.504013}
+    m_Value: {x: 1.8488761, y: 1.5274158, z: 3.4495456}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,13 +551,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.055580094, y: 0.9439547, z: -0.24486604, w: -0.21426068}
+    m_Target: {x: -0.073198244, y: 0.92546064, z: -0.23562871, w: -0.28749683}
     speed: 2
-    m_Value: {x: -0.055579916, y: 0.94395167, z: -0.24486525, w: -0.21426}
+    m_Value: {x: -0.07319785, y: 0.9254557, z: -0.23562744, w: -0.2874953}
   m_Size:
-    m_Target: 1.2653753
+    m_Target: 1.3116387
     speed: 2
-    m_Value: 1.2653753
+    m_Value: 1.3116387
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -678,22 +678,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Stylized Water For URP/Demos/Buoyancy
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Stylized Water For URP/Demos/Buoyancy
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\paand\OneDrive\Dokumenter\GodtOgJamma\GodtOgJammet22
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 88.600006}
-    m_SelectedIDs: 42c70000
-    m_LastClickedID: 51010
-    m_ExpandedIDs: 000000000e4b0000144b0000e85c000074c700008cc7000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 144b0000
+    m_LastClickedID: 19220
+    m_ExpandedIDs: 00000000144b0000e85c000074c700008cc7000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -746,24 +746,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0cdf0000
-    m_LastClickedInstanceID: 57100
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: BoatMovement
+      m_OriginalName: BoatMovement
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 3330
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -773,7 +773,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 3.600006}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -891,7 +891,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 378
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

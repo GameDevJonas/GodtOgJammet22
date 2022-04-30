@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseBehaviour : MonoBehaviour
+public class CursorVisibility : MonoBehaviour
 {
     private void Awake()
     {
