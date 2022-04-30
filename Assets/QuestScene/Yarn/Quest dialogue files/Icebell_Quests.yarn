@@ -1,6 +1,6 @@
 ﻿title: IcecreamQuest
 ---
-<<if icecream_quest>>
+<<if $icecream_quest>>
 <<jump JukeboxQuest>>
 <<else>>
 
@@ -11,7 +11,7 @@ Icebell: We need an ice cream machine!!! That'd be so... COOL!!!!
 -> OK!
     Icebell: Yes... Very good... Very nICE.
     <<startQuest Icecream>>
-    <<set icecream_quest to true>>
+    <<set $icecream_quest to true>>
 -> Not right now...
     Icebell: NOOOOOOOOO
 <<endif>>
@@ -20,7 +20,7 @@ Icebell: We need an ice cream machine!!! That'd be so... COOL!!!!
 
 title: JukeboxQuest
 ---
-<<if jukebox_quest>>
+<<if $jukebox_quest>>
 <<jump IcebellHappy>>
 <<else>>
 
@@ -30,7 +30,7 @@ Icebell: I think we need a jukebox!
 -> Great idea!
     Icebell: SWEET!!!
     <<startQuest Jukebox>>
-    <<set jukebox_quest to true>>
+    <<set $jukebox_quest to true>>
 -> I'm busy.
     Icebell: Oh, that's too bad!!!!!!!!!!! Maybe later.
 <<endif>>
@@ -42,4 +42,4 @@ Icebell: I think we need a jukebox!
 title: IcebellHappy
 ---
 Icebell: This place is looking pretty COOL!!!!
-==
+===
