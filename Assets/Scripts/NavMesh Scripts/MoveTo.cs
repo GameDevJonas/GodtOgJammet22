@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class MoveTo : MonoBehaviour
 {
+    [Header("Put in 'ControllingBoat' Waypoint here")]
     public Transform goal;
     private NavMeshAgent agent;
 
