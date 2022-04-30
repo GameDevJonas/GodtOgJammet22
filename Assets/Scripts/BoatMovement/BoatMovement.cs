@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using TMPro;
+using UnityEngine.UI;
 
 public class BoatMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BoatMovement : MonoBehaviour
 
     [SerializeField] private float turnSpeed;
     [SerializeField] private float boatSpeed;
+    [SerializeField] private Image speedometerArrow;
 
     [SerializeField] private TextMeshProUGUI boatSpeedText;
 
@@ -45,8 +47,15 @@ public class BoatMovement : MonoBehaviour
     private void CalculateSpeed()
     {
         float speedValue;
+        double speedText;
         speedValue = _rb.velocity.magnitude;
-        boatSpeedText.text = "Boat speed: " + (int)speedValue;
+        speedValue *= 10;
+        speedText = System.Math.Round(speedValue, 0);
+        boatSpeedText.text = speedText.ToString();
+
+        float currentSpeedLerp = BoatSpeedValue / 2.5f;
+        float rotationAngle = Mathf.Lerp(0, -240f, currentSpeedLerp);
+        speedometerArrow.transform.rotation = Quaternion.Euler(0, 0, rotationAngle);
     }
 
     private void RotateBoat()
@@ -75,7 +84,7 @@ public class BoatMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            BoatSpeedValue = .9f;
+            //BoatSpeedValue = .9f;
         }
     }
 }
