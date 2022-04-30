@@ -9,6 +9,8 @@ public class BoatMovement : MonoBehaviour
 {
     public float BoatSpeedValue;
 
+    public bool canMove;
+
     [SerializeField] private float turnSpeed;
     [SerializeField] private float boatSpeed;
     [SerializeField] private Image speedometerArrow;
@@ -28,8 +30,11 @@ public class BoatMovement : MonoBehaviour
 
     private void Update()
     {
-        GetInputs();
-        CalculateSpeed();
+        if (canMove)
+        {
+            GetInputs();
+            CalculateSpeed();
+        }
     }
 
     private void FixedUpdate()
