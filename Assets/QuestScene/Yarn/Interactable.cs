@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private BoxCollider interactableBox;
     public UnityEvent OnInteracted = new UnityEvent();
     
-    public static bool isInteractable;
+    public bool isInteractable;
 
 
     private void Update()
