@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Panda
-    furnitureItem: {fileID: 0}
+    furnitureID: 9
     questCompletionRequirements:
     - resourceId: cotton
       requiredAmount: 1

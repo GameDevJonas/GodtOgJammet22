@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Sofa
-    furnitureItem: {fileID: 0}
+    furnitureID: 6
     questCompletionRequirements:
     - resourceId: fabric
       requiredAmount: 1

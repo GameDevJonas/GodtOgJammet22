@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Palm
-    furnitureItem: {fileID: 0}
+    furnitureID: 7
     questCompletionRequirements:
     - resourceId: palm
       requiredAmount: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Icecream
-    furnitureItem: {fileID: 0}
+    furnitureID: 5
     questCompletionRequirements:
     - resourceId: ice
       requiredAmount: 1

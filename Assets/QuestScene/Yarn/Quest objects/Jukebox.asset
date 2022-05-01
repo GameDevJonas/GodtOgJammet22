@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Jukebox
-    furnitureItem: {fileID: 0}
+    furnitureID: 4
     questCompletionRequirements:
     - resourceId: cd
       requiredAmount: 1

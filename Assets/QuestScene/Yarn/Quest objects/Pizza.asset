@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Pizza
-    furnitureItem: {fileID: 0}
+    furnitureID: 3
     questCompletionRequirements:
     - resourceId: clay
       requiredAmount: 1

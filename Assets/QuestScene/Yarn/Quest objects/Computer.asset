@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Computer
-    furnitureItem: {fileID: 0}
+    furnitureID: 8
     questCompletionRequirements:
     - resourceId: steel
       requiredAmount: 1

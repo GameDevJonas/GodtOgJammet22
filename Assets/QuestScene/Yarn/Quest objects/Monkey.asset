@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Monkey
-    furnitureItem: {fileID: 0}
+    furnitureID: 2
     questCompletionRequirements:
     - resourceId: stone
       requiredAmount: 1

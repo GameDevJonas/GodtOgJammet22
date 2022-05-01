@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questDefinition:
     questNameId: Fridge
-    furnitureItem: {fileID: 0}
+    furnitureID: 1
     questCompletionRequirements:
     - resourceId: glass
       requiredAmount: 1
