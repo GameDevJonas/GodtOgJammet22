@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 84ae327a90f172549baa074bda3cc70d
+guid: f35bd81f53802b941934108a97eae803
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CharacterBody_icebell
-    second: {fileID: 2100000, guid: 2339dfb4060a1bf42b7042181dc01121, type: 2}
+      name: bear1
+    second: {fileID: 2100000, guid: 534f679425c30594b831cc78ff7ce4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: icecream
+    second: {fileID: 2100000, guid: 806ef7e5df1ef104eb3e5fc39944d27b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: icecreams
+    second: {fileID: 2100000, guid: 4373175129b473443a66d17ac1b70041, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: icecreamstand
+    second: {fileID: 2100000, guid: c3bcc9b6a46668046beac34e5a59f107, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -93,7 +108,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 40
+    globalScale: 0.39999998
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

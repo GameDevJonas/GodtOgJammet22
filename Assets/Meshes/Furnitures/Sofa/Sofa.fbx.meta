@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 84ae327a90f172549baa074bda3cc70d
+guid: 64e4bc0dae8615b43897d227dd296682
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CharacterBody_icebell
-    second: {fileID: 2100000, guid: 2339dfb4060a1bf42b7042181dc01121, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: 4fcbcb5d2bb366a47940dba4143b3a66, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
