@@ -26,23 +26,26 @@ public class IslandInfo : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && activated && BoatModes.myBoatMode == BoatModes.BoatMode.cruise)
         {
             GetComponent<ResourceGiver>().GiveResource();
+            GetComponentInChildren<AudioSource>().Play();
+            GetComponentInChildren<AudioSource>().enabled = false;
+            activated = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) EnterExitMe();
+        if (other.CompareTag("Player")) EnterExitMe(true);
         if (!myMapName.activeSelf) myMapName.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) EnterExitMe();
+        if (other.CompareTag("Player")) EnterExitMe(false);
     }
 
-    private void EnterExitMe()
+    private void EnterExitMe(bool activate)
     {
-        activated = !activated;
+        activated = activate;
         if (activated) cruisingUI.IslandNameIn(islandName);
     }
 }

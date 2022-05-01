@@ -19,6 +19,8 @@ public class CruisingUI : MonoBehaviour
 
     private BoatMovement boatMovement;
 
+    bool tabKeyDown;
+
     private void Awake()
     {
         boatMovement = FindObjectOfType<BoatMovement>();
@@ -28,6 +30,11 @@ public class CruisingUI : MonoBehaviour
     {
         UpdateSpeedometer();
         CheckForUI();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            tabKeyDown = !tabKeyDown;
+        }
     }
 
     private void CheckForUI()
@@ -35,7 +42,7 @@ public class CruisingUI : MonoBehaviour
         boatUI.position = new Vector3(boatPlayer.position.x, boatUI.position.y, boatPlayer.position.z);
         boatUI.rotation = boatPlayer.GetChild(0).rotation;
 
-        bool tabKeyDown = Input.GetKey(KeyCode.Tab);
+        //bool tabKeyDown = Input.GetKey(KeyCode.Tab);
         minimapObject.SetActive(tabKeyDown);
         speedometerObject.SetActive(tabKeyDown);
 

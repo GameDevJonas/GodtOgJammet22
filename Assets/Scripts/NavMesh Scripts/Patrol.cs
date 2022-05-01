@@ -13,11 +13,17 @@ public class Patrol : MonoBehaviour
 
     public Animator myAnimator;                            //Reference to animator component of child (Jonas)
 
-    void Start()
+    private void Awake()
     {
         myAnimator = GetComponentInChildren<Animator>();    //Gets FIRST Animator component in children
 
         agent = GetComponent<NavMeshAgent>();               //Fetches NavMesh agent component
+
+        //Flyttet til Awake() for å sørge for at dette skjer før Start().
+    }
+
+    void Start()
+    {
 
         agent.autoBraking = false;                          //Turns off Autobraking
 
@@ -54,7 +60,7 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f && !agent.isStopped)
+        if (!agent.pathPending && agent.remainingDistance < 0.5f && !agent.isStopped && agent.enabled)
             StartCoroutine(WaitForSeconds());
     }
 

@@ -8,7 +8,7 @@ public class QuestUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questTitletext;
     [SerializeField] private TextMeshProUGUI questResourcetext;
 
-    int completedQuests;
+    public int completedQuests;
 
     private void Start()
     {
@@ -19,8 +19,8 @@ public class QuestUI : MonoBehaviour
 
     public void TurnOnQuestIndicator()
     {
-        questTitletext.text = QuestTracker.CurrentQuest.questDefinition.questNameId;
-        questResourcetext.text = QuestTracker.CurrentQuest.questDefinition.questCompletionRequirements[0].resourceId;
+        questTitletext.text = "Furniture: " + QuestTracker.CurrentQuest.questDefinition.questNameId;
+        questResourcetext.text = "Needs: " + QuestTracker.CurrentQuest.questDefinition.questCompletionRequirements[0].resourceId;
     }
 
     public void TurnOffQuestIndicator()
