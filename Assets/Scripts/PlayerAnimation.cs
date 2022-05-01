@@ -17,12 +17,14 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (controller.enabled) CheckForMoving();
+        CheckForMoving();
+
         anim.SetBool("CruiseMode", !controller.enabled);
     }
 
     private void CheckForMoving()
     {
-        anim.SetBool("IsMoving", movement.isMoving);
+        if (movement.enabled) anim.SetBool("IsMoving", movement.isMoving);
+        else anim.SetBool("IsMoving", false);
     }
 }

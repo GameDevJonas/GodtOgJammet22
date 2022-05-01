@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using UnityEngine.Events;
 
 //this script is added to the object who speaks.
 
@@ -14,6 +15,9 @@ public class YarnInteractable : MonoBehaviour
     private DialogueRunner dialogueRunner;
     private LineView lineView;
     public string conversationStartNode;
+
+    public UnityEvent OnConversationStart;
+    public UnityEvent OnConversationEnd;
 
     private bool isCurrentConversation;
 
@@ -31,7 +35,7 @@ public class YarnInteractable : MonoBehaviour
         {
             return;
         }
-        
+        OnConversationStart.Invoke();
         isCurrentConversation = true;
         dialogueRunner.StartDialogue(conversationStartNode);
         ConversationActive = true;
@@ -44,7 +48,7 @@ public class YarnInteractable : MonoBehaviour
             isCurrentConversation = false;
         }
 
-        if (ConversationActive) ConversationActive = false;
+        if (ConversationActive) ConversationActive = false; OnConversationEnd.Invoke();
     }
 
     private void Update()

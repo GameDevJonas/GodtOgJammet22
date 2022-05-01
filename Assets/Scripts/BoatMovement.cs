@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.AI;
 
 public class BoatMovement : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class BoatMovement : MonoBehaviour
         if (cruiseModeTrue)
         {
             canMove = true;
+            TurnOnOffNavMeshAgents(false);
             _rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
         else
@@ -53,6 +55,18 @@ public class BoatMovement : MonoBehaviour
             _rb.velocity = Vector3.zero;
             _rb.constraints = RigidbodyConstraints.FreezeAll;
             canMove = false;
+            TurnOnOffNavMeshAgents(true);
+            _xInput = 0;
+            _yInput = 0;
+        }
+    }
+
+    void TurnOnOffNavMeshAgents(bool turnOn)
+    {
+        foreach(NavMeshAgent agent in FindObjectsOfType<NavMeshAgent>())
+        {
+            agent.enabled = turnOn;
+            agent.GetComponent<Patrol>().myAnimator.SetBool("IsMoving", turnOn);
         }
     }
 

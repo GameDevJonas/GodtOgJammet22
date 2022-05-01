@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class BoatModes : MonoBehaviour
 {
     public enum BoatMode { cruise, deck};
-    [SerializeField] BoatMode myBoatMode;
+    public static BoatMode myBoatMode;
 
     public UnityEvent cruiseEvents, deckEvents;
 

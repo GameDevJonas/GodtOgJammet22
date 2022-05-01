@@ -21,6 +21,14 @@ public class IslandInfo : MonoBehaviour
         myMapName.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && activated && BoatModes.myBoatMode == BoatModes.BoatMode.cruise)
+        {
+            GetComponent<ResourceGiver>().GiveResource();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) EnterExitMe();

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33841187, g: 0.65197253, b: 0.93222475, a: 1}
+  m_IndirectSpecularColor: {r: 0.33851334, g: 0.6520119, b: 0.9322191, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -769,6 +769,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
@@ -3007,6 +3011,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: myMapName
       value: 
       objectReference: {fileID: 0}
@@ -4123,6 +4131,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: myMapName
       value: 
       objectReference: {fileID: 0}
@@ -4480,6 +4492,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
@@ -5542,6 +5558,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
@@ -7738,6 +7758,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: myMapName
       value: 
       objectReference: {fileID: 0}
@@ -7813,6 +7837,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
@@ -8055,6 +8083,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
@@ -8608,6 +8640,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: myMapName
       value: 
       objectReference: {fileID: 0}
@@ -8725,6 +8761,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508649, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4591565516877508650, guid: 5c027ced27027dd4689436e9da4fa0d5, type: 3}

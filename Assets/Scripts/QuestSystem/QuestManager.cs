@@ -16,6 +16,10 @@ public class QuestManager : MonoBehaviour
     public static UnityEvent<Quest> OnQuestStarted = new UnityEvent<Quest>();
     public static UnityEvent<QuestDefinition> OnQuestComplete = new UnityEvent<QuestDefinition>();
 
+    //Event for non-Quest related
+    public static UnityEvent OnQuestStart = new UnityEvent();
+    public static UnityEvent OnQuestDone = new UnityEvent();
+
     public void Awake()
     {
         Instance = this;
@@ -52,12 +56,15 @@ public class QuestManager : MonoBehaviour
         
         // Invoke on quest started event
         OnQuestStarted.Invoke(QuestTracker.CurrentQuest);
+        OnQuestStart.Invoke();        //Jonas sin :)
+
         Debug.Log($"Started Quest \"{QuestTracker.CurrentQuest.questDefinition.questNameId}\"");
         
         // Invoke and clean up when the quest is complete
         QuestTracker.CurrentQuest.OnQuestComplete.AddOneTimeListener(() =>
         {
             OnQuestComplete.Invoke(QuestTracker.CurrentQuest.questDefinition);
+            OnQuestDone.Invoke();            //Jonas sin :)
             QuestTracker.RegisterQuestAsComplete(QuestTracker.CurrentQuest);
             QuestTracker.CurrentQuest = null;
         });

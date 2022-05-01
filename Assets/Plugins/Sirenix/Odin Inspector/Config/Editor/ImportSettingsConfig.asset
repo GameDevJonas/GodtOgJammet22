@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4c9bb6f8fe1d44eb319a2d3432b003, type: 3}
-  m_Name: Palm
+  m_Script: {fileID: 188390376, guid: a4865f1ab4504ed8a368670db22f409c, type: 3}
+  m_Name: ImportSettingsConfig
   m_EditorClassIdentifier: 
-  questDefinition:
-    questNameId: Palm
-    furnitureItem: {fileID: 0}
-    questCompletionRequirements:
-    - resourceId: palm
-      requiredAmount: 1
+  automateBeforeBuild: 1
