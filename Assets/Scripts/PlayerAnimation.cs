@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         if (controller.enabled) CheckForMoving();
-        else anim.SetBool("IsMoving", false);
+        anim.SetBool("CruiseMode", !controller.enabled);
     }
 
     private void CheckForMoving()

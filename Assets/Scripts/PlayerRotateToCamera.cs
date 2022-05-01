@@ -33,7 +33,7 @@ public class PlayerRotateToCamera : MonoBehaviour
         Vector3 movementDirection = new Vector3(movement.movementDir.x, 0, movement.movementDir.z);
         rotationPoint.localPosition = movementDirection;
 
-        if (movementDirection != Vector3.zero)
+        if (movementDirection != Vector3.zero && controller.enabled)
         {
             avatar.LookAt(rotationPoint, Vector3.up);
             avatar.rotation = Quaternion.Euler(0, avatar.rotation.eulerAngles.y, 0);
